@@ -23,8 +23,14 @@ with open(inputfile, 'r') as csvFile:
 
     with open('attributes.csv', 'r') as csvFile1:
         state = [row for row in csv.reader(csvFile1)] 
+        # #get so dong
+        nrow1 = len(state)
+        # print(state)
+        for i in range(0,nrow1):
+            state_arr.append(state[i][0])
 
     print(nrow1)
+
     output_file.write('name')
     for i in range(0,nrow1):
         output_file.write(','+str(state_arr[i]))
